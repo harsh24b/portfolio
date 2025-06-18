@@ -480,6 +480,22 @@ html {
   grid-column: 2 / span 1;
 }
 
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-column: auto !important;
+  }
+}
+
+
 /* Contact Section */
 .contact-section {
   background-color: #1E1E1E;
@@ -577,11 +593,18 @@ html {
   
   .projects-grid {
     padding: 0 5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
   
   .about-skills {
     margin-left: 2rem;
     gap: 4rem;
+  }
+  
+  .project-card {
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -606,13 +629,22 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
   
-
   .navbar nav ul {
     gap: 4rem;
   }
   
   .work-title-img {
     max-width: 50%;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    width: 100%;
   }
 }
 
@@ -688,7 +720,28 @@ html {
     font-size: 0.9rem;
   }
   
-
+  /* Work Section Mobile Styles - Single Column */
+  .work-section {
+    padding: 3rem 1rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    padding: 0 1rem;
+    gap: 2rem;
+    max-width: 100%;
+    justify-items: center;
+  }
+  
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0;
+  }
+  
+  .work-title-img {
+    max-width: 60%;
+  }
   
   .contact-section {
     padding: 4rem 1rem;
@@ -799,30 +852,25 @@ html {
     width: 60px;
   }
   
-  .work-title-img {
-    max-width: 90%;
+  /* Work Section Small Mobile - Single Column */
+  .work-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+    justify-items: center;
   }
   
   .project-card {
-    padding: 1rem;
+    width: 100%;
+    max-width: 320px;
   }
   
-  .project-card h4 {
-    font-size: 0.9rem;
-  }
-  
-  .project-card p {
-    font-size: 0.75rem;
-  }
-  
-  .visit-btn {
-    font-size: 0.7rem;
-    padding: 0.45rem 0.9rem;
-  }
-  
-  .tags span {
-    font-size: 0.5rem;
-    padding: 0.2rem 0.6rem;
+  .work-title-img {
+    max-width: 70%;
   }
   
   .contact-heading p {
@@ -889,7 +937,25 @@ html {
     padding: 2rem 0.5rem;
   }
   
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+    padding: 0 0.5rem;
+    justify-items: center;
+  }
+  
+  .project-card {
+    width: 100%;
+    max-width: 280px;
+    padding: 1.2rem;
+  }
+  
+  .work-title-img {
+    max-width: 80%;
+  }
+  
   .contact-section {
     padding: 3rem 0.5rem;
   }
 }
+
