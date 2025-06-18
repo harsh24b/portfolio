@@ -1,0 +1,552 @@
+/* CSS: Portfolio Page Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Anonymous Pro', monospace;
+  background-color: #1E1E1E;
+  color: #FFF4D9;
+}
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #FF6F3A;
+  color: #FFF4D9;
+  cursor: pointer;
+  padding: 0.6rem 0.7rem;
+  font-size: 1.2rem;
+  font-family:'anonymous pro', monospace;
+  font-weight: lighter;
+  border-radius: 20%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  display: flex;
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #ff8f5d;
+}
+
+
+
+.container {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 150px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.navbar nav ul {
+  font-family: 'Blair ITC', sans-serif;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  list-style: none;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #FFF4D9;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.navbar nav ul li a:hover {
+  color: #FF6F3A;
+}
+
+.nav-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  transition: filter 0.2s ease;
+}
+
+.navbar nav ul li a:hover .nav-icon {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(74%) saturate(748%) hue-rotate(341deg) brightness(101%) contrast(101%);
+}
+
+.hero {
+  text-align: center;
+  padding: 0rem 0;
+}
+
+.hero .intro {
+  font-family: 'Blair ITC', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FFF4D9;
+}
+
+.hero-img img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.about-skills {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0rem;
+  margin-left: 4rem;
+  gap: 7rem;
+}
+
+.about,
+.skills {
+  flex: 1;
+
+}
+
+.about h2,
+.skills h2 {
+  font-family: 'Blair ITC', sans-serif;
+  font-size: 1.8rem;
+  color: #FF6F3A;
+}
+
+.about p {
+ color: #FFF4D9;
+ text-align: justify;
+ width: 40rem;
+ font-family: "Anonymous Pro", monospace;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 150%; /* 1.7875rem */
+}
+.track-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.trackinfinite {
+  width: 200%;
+  height: 20px; /* or as needed */
+  animation: scrollTrack 6s linear infinite;
+}
+
+@keyframes scrollTrack {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skills ul {
+ color: #FFF4D9;
+ font-style: normal;
+ font-weight: 400;
+ line-height: 110%; /* 1.7875rem */
+
+}
+.expertise h2 {
+  font-family: 'Blair ITC', sans-serif;
+  font-size: 1.8rem;
+  color: #FF6F3A;
+}
+.expertise p {
+  color: #FFF4D9;
+  font-family: "Anonymous Pro", monospace;
+  font-style: normal;
+  text-align: center;
+  line-height: 150%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.skills ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skills ul li {
+  margin-bottom: 0.5rem;
+}
+
+.expertise {
+  margin-top: 6rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.expertise.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cards {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background-color: #2A2A2A;
+  padding: 2rem;
+  text-align: left;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+.card p {
+  color: #FFF4D9;
+  font-family: "Anonymous Pro", monospace;
+ text-align: left;
+  line-height: 150%; /* 1.7875rem */
+} 
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #FFF4D9;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-family: 'Blair ITC', sans-serif;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-skills {
+    flex-direction: column;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@font-face {
+  font-family: 'Blair ITC';
+  src: url('BlairITC.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('AnonymousPro-Regular.woff') format('woff');
+}
+
+.and-more-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1E1E1E;
+  padding: 2rem 0;
+  overflow: hidden;
+  position: relative;
+  gap: 2rem;
+}
+
+.and-more-text {
+  font-family: 'Blair ITC', sans-serif;
+  color: #FFF4D9;
+  font-size: 1rem;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.scroll-image {
+  width: 120px;
+  height: 20px;
+  background-image: url("smalltrack3.png"); /* Use your actual image path */
+  background-repeat: repeat-x;
+  background-size: contain;
+  animation: scrollAnim 2s linear infinite;
+}
+
+.scroll-image.left {
+  animation-direction: normal;
+}
+
+.scroll-image.right {
+  animation-direction: reverse;
+}
+
+@keyframes scrollAnim {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+/* Work Section Wrapper */
+.work-section {
+  background-color: #1E1E1E;
+  padding: 4rem 2rem;
+  font-family: "Anonymous Pro", monospace;
+  color: #FFF4D9;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers children horizontally */
+  box-sizing: border-box;
+}
+
+/* Heading Image */
+.work-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.work-title-img {
+  max-width: 30%;
+  height: auto;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 cards per row */
+  gap: 2rem;
+  width: 100%;
+  max-width: 85rem;                        /* Prevents grid from stretching too far */
+  padding: 0 15rem;                        /* Equal margin on both sides */
+  box-sizing: border-box;
+  justify-content: center;
+}
+/* Individual Card */
+.project-card {
+  background-color: #2B2B2B;
+  border: 1px solid #FFF4D91A;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 22rem; /* Fixed width */
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card.visible:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.project-card h4 {
+  color: #FFF4D9;
+  font-family: 'Blair ITC', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+.project-card p {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #E5DCC5;
+  text-align: left;
+}
+
+/* Visit Button */
+.visit-btn {
+  display: inline-block;
+  background-color: #FF6F3A;
+  color: #FFFFFF;
+  font-family: 'Blair ITC', sans-serif;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 999px;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: background-color 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.visit-btn:hover {
+  background-color: #fff4d9;
+  color: #FF6F3A;
+}
+
+
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-family: poppins, sans-serif;
+  letter-spacing: 1.1px;
+}
+
+.tags span {
+  background-color: #2B2B2B;
+  color: #c0c0c0;
+  padding: 0.3rem 0.9rem;
+  border: 0.5px solid #8a8a8a;;
+  font-size: 0.60rem;
+  border-radius: 999px; /* Fully curved */
+}
+
+.block {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects-grid > .project-card:nth-child(7) {
+  grid-column: 2 / span 1;
+}
+/* Contact Section */
+.contact-section {
+  background-color: #1E1E1E;
+  color: #FFF4D9;
+  text-align: center;
+  padding: 6rem 2rem;
+  font-family: "Anonymous Pro", monospace;
+  margin-bottom: 7rem;
+  margin-top: 5rem;
+}
+
+.contact-heading p {
+  font-size: 1.1rem;
+  color: #FFF4D9;
+  margin: 0;
+}
+
+.contact-heading h1 {
+  font-family: 'Blair ITC', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #FF6F3A;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+/* Contact Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.5rem 3rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.4rem;
+  border: 1px solid #FFF4D9;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #FFF4D9;
+  opacity: 0;
+  transform: translateY(30px); /* Initial position for fade-up */
+  transition: all 0.4s ease; /* Smooth transition for both opacity and transform */
+}
+
+.contact-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px); /* Hover effect */
+}
+
+
+.icon-circle {
+  background-color: transparent;
+  border: 2px solid #FF6F3A;
+  color: #FF6F3A;
+  font-weight: bold;
+  font-size: 0.85rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+.icon-circle img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.contact-card span {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-title-img {
+    max-width: 80%;
+  }
+}

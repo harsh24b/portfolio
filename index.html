@@ -1,0 +1,329 @@
+<!-- HTML: Portfolio Page Structure -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Portfolio</title>
+  <link rel="stylesheet" href="styleportfolio.css" />
+ 
+</head>
+<body>
+  <button id="scrollToTopBtn" title="Go to top">UP
+
+</button>
+
+  <div class="container">
+ <header class="navbar">
+  <nav>
+    <ul>
+  <li>
+    <a href="#about-section">
+      <img src="BLACKARROW.svg" alt="icon" class="nav-icon" /> ABOUT
+    </a>
+  </li>
+  <li>
+    <a href="#work-section">
+      <img src="BLACKARROW.svg" alt="icon" class="nav-icon" /> WORK
+    </a>
+  </li>
+  <li>
+    <a href="#contact-section">
+      <img src="BLACKARROW.svg" alt="icon" class="nav-icon" /> CONTACT
+    </a>
+  </li>
+</ul>
+
+  </nav>
+</header>
+
+
+    <section class="hero">
+
+      <div class="hero-img">
+        <img src="threeimages.png" alt="Hero Image" />
+      </div>
+    </section>
+
+    <section class="about-skills" id="about-section">
+    
+
+      <div class="about">
+        <h2>ABOUT ME</h2>
+        <p>I am a UI/UX designer currently pursuing my degree at MIT Institute of Design. I thrive on crafting intuitive digital experiences that balance creativity, usability, and impact. Whether it's simplifying complex systems or bringing emotion into interfaces, my approach blends human-centered thinking with a strong visual language.</p>
+        <br> 
+        <div class="track-scroll-wrapper">
+         <img src="tracklong.png" alt="trackpic" class="trackinfinite" />
+        </div>
+      </div>
+      <div class="skills">
+        <h2>SKILLS</h2>
+         <ul>
+          <li><img src="arrows.svg" alt="Arrow Icon" /> User Research</li>
+          <li><img src="arrows.svg" alt="Arrow Icon" /> Interaction Design</li>
+         <li><img src="arrows.svg" alt="Arrow Icon" /> Accessibility & Inclusive Design</li>
+         <li><img src="arrows.svg" alt="Arrow Icon" /> Human-Centered Design</li>
+         <li><img src="arrows.svg" alt="Arrow Icon" /> Visual & Interface Design</li>
+         <li><img src="arrows.svg" alt="Arrow Icon" /> Data Analyzing</li>
+         <li><img src="arrows.svg" alt="Arrow Icon" /> Data Storytelling</li>
+         <li><img src="arrows.svg" alt="Arrow Icon" /> Artificial Intelligence (AI)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="expertise">
+      <h2>OTHER AREAS OF EXPERTISE</h2>
+      <p>
+        Alongside UI/UX design, I actively contribute to the Human–Computer Interaction Professionals Association of India (HCIPAI) and the ACM SIGCHI Student Chapter at MIT Institute of Design, where I collaborate on design strategy, event visuals, and educational content to promote HCI across India.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <img src="image 26.png" alt="Graphic Design Icon" />
+          <h3>GRAPHIC DESIGN</h3>
+          <p>Visual storytelling through impactful layouts and design systems that communicate clearly and creatively.</p>
+        </div>
+        <div class="card">
+          <img src="image 24.png" alt="Social Media Icon" />
+          <h3>SOCIAL MEDIA STRATEGY</h3>
+          <p>Creating platform-specific strategies and visuals that connect with audiences and grow engagement.</p>
+        </div>
+        <div class="card">
+          <img src="image 25.png" alt="Branding Icon" />
+          <h3>BRANDING</h3>
+          <p>Building strong brand identities that leave a lasting impression, from logo design to cohesive brand narrative.</p>
+        </div>
+        <div class="card">
+          <img src="image 23.png" alt="Video Editing Icon" />
+          <h3>VIDEOGRAPHY & EDITING</h3>
+          <p>Making engaging videos and reels through effective storytelling, from concept to final cut.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    const expertiseSection = document.querySelector('.expertise');
+    observer.observe(expertiseSection);
+  </script>
+
+<div class="and-more-wrapper">
+  <div class="scroll-image left"></div>
+  <h2 class="and-more-text">AND MORE</h2>
+  <div class="scroll-image right"></div>
+</div>
+
+<section class="work-section" id="work-section">
+  <!-- Heading Image -->
+  <div class="work-heading block">
+    <img src="work.png" alt="Design Thinking at Work" class="work-title-img" />
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="projects-grid">
+
+    <!-- Each card now has the .block class for scroll animation -->
+    <div class="project-card block">
+      <img src="infotainment.png" alt="Infotainment System">
+      <h4>INFOTAINMENT SYSTEM</h4>
+      <p>This project improves rear-seat passenger interaction with car infotainment systems by enabling independent control of features like music, climate, and calls—reducing driver distraction.</p>
+      <a href="https://drive.google.com/file/d/1PRNq45uOcc0_L6qJl-K0DwyE30EciJd8/view" class="visit-btn">VISIT <span class="arrow">↗</span></a>
+
+      <div class="tags">
+        <span>User Centered Design</span><span> In Car Experience</span><span>UI/UX Case Study</span>
+      </div>
+    </div>
+
+    <div class="project-card block">
+      <img src="sanctum.png" alt="The Sanctum">
+      <h4>THE SANCTUM</h4>
+      <p>Aim of this project was to design & prototype an interactive storytelling app that engages users through a dynamic narrative decision-making, and multimedia elements.</p>
+      <a href="https://www.behance.net/gallery/226243887/The-Sanctum-A-Storytelling-Based-Game-Design-Project" class="visit-btn">VISIT <span class="arrow">↗</span></a>
+
+      <div class="tags">
+        <span>Game Design</span><span>Interactive Storytelling</span><span>Storytelling</span>
+      </div>
+    </div>
+
+    <div class="project-card block">
+      <img src="perplexity.png" alt="Perplexity Redesign">
+      <h4>PERPLEXITY REDESIGN</h4>
+      <p>Perplexity AI might have all the answers, but does it have the best user experience? Let's dive into a redesign journey backed by data, heuristics, and a touch of UX magic!</p>
+      <a href="https://www.behance.net/gallery/222412833/Perplexity-AI-Redesign-UI-Redesign" class="visit-btn">VISIT <span class="arrow">↗</span></a>
+
+      <div class="tags">
+        <span>Redesign</span><span>Cognitive Ergonomics</span><span>Perplexity AI</span>
+      </div>
+    </div>
+
+    <div class="project-card block">
+      <img src="dataviz.png" alt="Data Visualization">
+      <h4>DATA VISUALIZATION</h4>
+      <p>Redesigned INA’s “Choose Your Weapon” infographic into a single-screen dashboard, enhancing clarity and visualizing global arms trade data more effectively.</p>
+      <a href="https://www.behance.net/gallery/228241265/Weapon-of-Influence-Data-Visualization" class="visit-btn">VISIT <span class="arrow">↗</span></a>
+
+      <div class="tags">
+        <span>Infographics</span><span>Dashboard Design</span>
+      </div>
+    </div>
+
+    <div class="project-card block">
+      <img src="rural.png" alt="Rural Women Entrepreneurs">
+      <h4>RURAL WOMEN ENTREPRENEURS</h4>
+      <p>Rural women entrepreneurs are a special needs group as they face barriers like limited access to education, finance, technology, and social support, often worsened by gender norms and geographic isolation.</p>
+      <a href="https://drive.google.com/file/d/1IZscGSIdSN-l7z6KZg1SvGseupY1e0kP/view?usp=sharing" class="visit-btn">VISIT <span class="arrow">↗</span></a>
+
+      <div class="tags">
+        <span>Case Study</span><span>Social Impact Project</span><span>Visual Communucation</span>
+      </div>
+    </div>
+
+    <div class="project-card block">
+      <img src="uber.png" alt="Uber Redesign">
+      <h4>UBER REDESIGN</h4>
+      <p>Conducted usability testing on our redesigned Uber UI, improved ride preference interactions, and user behavior for smoother experiences.</p>
+      <a href="https://drive.google.com/file/d/1TPVS69hw0hvj8vJ_GKUzeG8JbKhCTazo/view?usp=sharing" class="visit-btn">VISIT <span class="arrow">↗</span></a>
+
+      <div class="tags">
+        <span>Usability Testing</span><span>Redesign</span><span>In Car Experience</span>
+      </div>
+    </div>
+
+    <div class="project-card block">
+      <img src="brand.png" alt="Brand Guideline">
+      <h4>BRAND GUIDELINE</h4>
+      <p>Created a complete brand guideline covering logo, colors, typography, and tone to ensure visual consistency and strong brand identity across all platforms.</p>
+      <a href="https://www.behance.net/gallery/201506509/Brand-Guideline-of-Eatzy-The-mess-app" class="visit-btn">VISIT <span class="arrow">↗</span></a>
+
+      <div class="tags">
+        <span>Food Platform</span><span>Brand Identity</span>
+      </div>
+    </div>
+
+  </div>
+  
+</section>
+<script>
+const cardObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      cardObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.3
+});
+
+const animatedBlocks = document.querySelectorAll('.block');
+animatedBlocks.forEach(block => cardObserver.observe(block));
+
+</script>
+<section class="contact-section block" id="contact-section">
+  <div class="contact-heading">
+    <p>Let’s build a</p>
+    <h1>GREAT EXPERIENCE!</h1>
+  </div>
+
+  <div class="contact-grid">
+
+    <a href="mailto:harshhnbhawsar@gmail.com" class="contact-card">
+      <div class="icon-circle">
+        <img src="gmail.svg" alt="Email Icon" />
+      </div>
+      <span>harshhnbhawsar@gmail.com</span>
+    </a>
+
+    <a href="https://www.behance.net/harshbhawsar" class="contact-card" target="_blank">
+      <div class="icon-circle">
+        <img src="be.svg" alt="Behance Icon" />
+      </div>
+      <span>Harsh Bhawsar</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/harsh-bhawsar-ba25581b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="contact-card" target="_blank">
+      <div class="icon-circle">
+        <img src="in.svg" alt="LinkedIn Icon" />
+      </div>
+      <span>Harsh Bhawsar</span>
+    </a>
+
+    <a href="https://www.instagram.com/harshnvm?igsh=NjhldmlyZXd3eTR6" class="contact-card" target="_blank">
+      <div class="icon-circle">
+        <img src="insta.svg" alt="Instagram Icon" />
+      </div>
+      <span>@harshnvm</span>
+    </a>
+
+  </div>
+</section>
+
+<script>
+  const contactCardObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        contactCardObserver.unobserve(entry.target); // Remove this to repeat animation
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  const elementsToAnimate = document.querySelectorAll('.block');
+  elementsToAnimate.forEach(el => contactCardObserver.observe(el));
+</script>
+<script>
+const contactCards = document.querySelectorAll('.contact-card');
+
+const contactObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      contactObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+contactCards.forEach(card => contactObserver.observe(card));
+</script>
+<script>
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
+
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+<script>
+  // Remove hash from URL after scrolling
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash) {
+      const scrollToElement = document.querySelector(window.location.hash);
+      if (scrollToElement) {
+        scrollToElement.scrollIntoView({ behavior: "smooth" });
+        history.replaceState(null, null, ' '); // Removes the hash without reloading
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
